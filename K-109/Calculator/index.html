@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="calculator">
+        <input type="text">
+        <div id="buttons">
+            <div class="row">
+                <div onclick="clearInput()" class="button first-row-button">AC</div>
+                <div onclick="plusMinus()" class="button first-row-button">+/-</div>
+                <div onclick="calculate(this)" class="button first-row-button">%</div>
+                <div onclick="calculate(this)" class="button last-button">/</div>
+            </div>
+            <div class="row">
+                <div onclick="buttonPressed(this)" class="button">7</div>
+                <div onclick="buttonPressed(this)" class="button">8</div>
+                <div onclick="buttonPressed(this)" class="button">9</div>
+                <div onclick="calculate(this)" class="button last-button">*</div>
+            </div>
+            <div class="row">
+                <div onclick="buttonPressed(this)" class="button">4</div>
+                <div onclick="buttonPressed(this)" class="button">5</div>
+                <div onclick="buttonPressed(this)" class="button">6</div>
+                <div onclick="calculate(this)" class="button last-button">-</div>
+            </div>
+            <div class="row">
+                <div onclick="buttonPressed(this)" class="button">1</div>
+                <div onclick="buttonPressed(this)" class="button">2</div>
+                <div onclick="buttonPressed(this)" class="button">3</div>
+                <div onclick="calculate(this)" class="button last-button">+</div>
+            </div>
+            <div class="row">
+                <div onclick="buttonPressed(this)" style="width: 145px;" class="button">0</div>
+                <div onclick="dot()" class="button">.</div>
+                <div onclick="resultButton()" class="button last-button">=</div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

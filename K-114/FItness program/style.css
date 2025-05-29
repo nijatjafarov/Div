@@ -1,0 +1,95 @@
+body {
+    font-family: 'Roboto';
+    margin: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    background-color: rgb(240, 240, 240);
+    border: 3px solid rgb(240, 240, 240);
+    border-radius: 100px;
+}
+
+.nav-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#first-nav-item {
+    background-color: white;
+    border-radius: 100px;
+}
+
+.separator {
+    width: 2px;
+    background-color: rgb(220, 220, 220);
+    height: 25px;
+}
+
+#your-goals {
+    background-color: rgb(240, 240, 240);
+    padding: 12px 20px;
+    border-radius: 100px;
+    display: inline;
+}
+
+h1 {
+    font-weight: 500;
+    margin: 40px 0;
+}
+
+#download-button {
+    background-color: #000;
+    color: #FFF;
+    padding: 15px 20px;
+    border-radius: 100px;
+    display: inline;
+}
+
+#middle {
+    width: 400px !important;
+}
+
+#middle img {
+    width: 100%;
+}
+
+#main {
+    display: flex;
+    gap: 150px;
+    margin-top: 50px;
+}
+
+#left, #middle, #right {
+    width: 33%;
+}
+
+#right-inner {
+    background-color: rgb(240, 240, 240);
+    border-radius: 40px;
+    padding: 20px;
+    display: inline-block;
+    margin-top: 50%;
+}
+
+#right-inner h3 {
+    font-weight: 300;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+#emoji {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #FFF;
+    display: inline-block;
+}
+
+#emoji img {
+    width: 50px;
+}
