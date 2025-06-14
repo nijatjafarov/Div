@@ -30,3 +30,5 @@
 #     print(f'Aa, siz {axtarilan_cocuq}-un valideynisiniz? Sizin cocuq çox yaxşı cocuqdur')
 # else:
 #     print('Hmm. Mən bu cocuğu tanımıram.')
+
+print(1==1==1==2)

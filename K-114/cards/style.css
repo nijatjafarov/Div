@@ -23,6 +23,8 @@ body {
     padding: 25px;
     width: 350px;
     height: 150px;
+    position: relative;
+    overflow: hidden;
 }
 
 .left {
@@ -57,4 +59,9 @@ button {
     border: none;
     border-radius: 7px;
     width:fit-content;
+}
+
+.card img {
+    position: absolute;
+    
 }
