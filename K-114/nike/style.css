@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+nav {
+    margin: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo img {
+    height: 70px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#menu {
+    display: flex;
+    gap: 20px;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 50px;
+}
+
+input {
+    border: none;
+    background-color: rgb(239, 239, 239);
+}
+
+#tools {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}

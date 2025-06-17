@@ -1,0 +1,26 @@
+#big {
+    width: 500px;
+    height: 500px;
+    background-color: greenyellow;
+    position: relative;
+}
+
+#small1 {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    z-index: 100;
+}
+
+#small2 {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+}
+
+img {
+    height: 100%;
+}

@@ -6,23 +6,6 @@ xanalar = ['-', '-', '-', '-', '-', '-', '-', '-', '-']
 oyun = f"{xanalar[0]} | {xanalar[1]} | {xanalar[2]}\n{xanalar[3]} | {xanalar[4]} | {xanalar[5]}\n{xanalar[6]} | {xanalar[7]} | {xanalar[8]}"
 print(oyun)
 
-if xanalar[0] == xanalar[1] == xanalar[2] != '-':
-    print(f'{xanalar[0]} qalib gəldi')
-elif xanalar[3] == xanalar[4] == xanalar[5] != '-':
-    print(f'{xanalar[3]} qalib gəldi')
-elif xanalar[6] == xanalar[7] == xanalar[8] != '-':
-    print(f'{xanalar[6]} qalib gəldi')
-elif xanalar[1] == xanalar[3] == xanalar[6] != '-':
-    print(f'{xanalar[1]} qalib gəldi')
-elif xanalar[2] == xanalar[4] == xanalar[7] != '-':
-    print(f'{xanalar[1]} qalib gəldi')
-elif xanalar[3] == xanalar[5] == xanalar[8] != '-':
-    print(f'{xanalar[3]} qalib gəldi')
-elif xanalar[0] == xanalar[4] == xanalar[8] != '-':
-    print(f'{xanalar[0]} qalib gəldi')
-elif xanalar[2] == xanalar[4] == xanalar[6] != '-':
-    print(f'{xanalar[2]} qalib gəldi')
-
 
 while True:
     oyuncu1_gedisi = int(input(f'{oyuncu1}, zəhmət olmasa 1-9 arasında xana seçin: '))
@@ -39,4 +22,19 @@ while True:
     oyun = f"{xanalar[0]} | {xanalar[1]} | {xanalar[2]}\n{xanalar[3]} | {xanalar[4]} | {xanalar[5]}\n{xanalar[6]} | {xanalar[7]} | {xanalar[8]}"
     print(oyun)
 
-    
+    if xanalar[0] == xanalar[1] == xanalar[2] != '-':
+        print(f'{xanalar[0]} qalib gəldi')
+    elif xanalar[3] == xanalar[4] == xanalar[5] != '-':
+        print(f'{xanalar[3]} qalib gəldi')
+    elif xanalar[6] == xanalar[7] == xanalar[8] != '-':
+        print(f'{xanalar[6]} qalib gəldi')
+    elif xanalar[1] == xanalar[3] == xanalar[6] != '-':
+        print(f'{xanalar[1]} qalib gəldi')
+    elif xanalar[2] == xanalar[4] == xanalar[7] != '-':
+        print(f'{xanalar[1]} qalib gəldi')
+    elif xanalar[3] == xanalar[5] == xanalar[8] != '-':
+        print(f'{xanalar[3]} qalib gəldi')
+    elif xanalar[0] == xanalar[4] == xanalar[8] != '-':
+        print(f'{xanalar[0]} qalib gəldi')
+    elif xanalar[2] == xanalar[4] == xanalar[6] != '-':
+        print(f'{xanalar[2]} qalib gəldi')
