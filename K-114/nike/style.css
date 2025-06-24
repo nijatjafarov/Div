@@ -84,3 +84,17 @@ video {
     background-color: gainsboro;
 }
 
+#two-part {
+    display: flex;
+    height: 1000px;
+    overflow: hidden;
+}
+
+#two-part #left-part, #two-part #right-part {
+    width: 50%;
+}
+
+#two-part img {
+    width: 100%;
+}
+
