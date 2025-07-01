@@ -98,3 +98,12 @@ video {
     width: 100%;
 }
 
+#footer-menu {
+    display: flex;
+}
+
+.footer-column-item {
+    display: block;
+    color: gray;
+    margin: 20px 0;
+}
