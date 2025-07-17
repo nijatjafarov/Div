@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: "Playwrite VN Guides", cursive;
+}
+
+a {
+    color: greenyellow;
+    text-decoration: none;
+}
+
+img {
+    width: 1000px;
+    height: 500px;
+    object-fit: cover;
+}
