@@ -33,17 +33,22 @@ nav {
 }
 
 #cards {
-    margin: 15px 0;
+    margin: 15px;
 }
 
 .row {
     display: flex;
-    justify-content: space-evenly;
+    gap: 15px;
     margin-bottom: 15px;
 }
 
+.responsive-row {
+    display: flex;
+    gap: 15px;
+}
+
 .card {
-    width: 300px;
+    width: calc(100%-20px);
     padding: 20px;
     background-color: white;
 }
@@ -69,9 +74,33 @@ nav {
     cursor: pointer;
 }
 
+@media screen and (max-width: 1024px) {
+    .row {
+        display: block;
+    }
+
+    .responsive-row {
+        margin-bottom: 15px;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     #hamburger {
         display: block;
+    }
+
+    #nav-center {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .responsive-row {
+        display: block;
+    }
+
+    .card {
+        margin-bottom: 15px;
     }
 }
