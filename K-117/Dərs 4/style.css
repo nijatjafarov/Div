@@ -28,9 +28,35 @@ nav {
     text-decoration: none;
 }
 
+#responsive-menu {
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid gainsboro;
+    display: none;
+}
+
+#responsive-menu a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+
 #hamburger {
     cursor: pointer;
     display: none;
+}
+
+#card-adder {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    margin-top: 15px;
+    cursor: pointer;
 }
 
 #cards {

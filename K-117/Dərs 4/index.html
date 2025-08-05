@@ -25,9 +25,20 @@
         <div id="nav-right">
             <img src="heart.svg" alt="">
             <img src="bag.svg" alt="">
-            <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            <svg id="hamburger" onclick="responsiveMenuHandler()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
         </div>
     </nav>
+    <div id="responsive-menu">
+        <a href="">New</a>
+        <a href="">Men</a>
+        <a href="">Women</a>
+        <a href="">Kids</a>
+        <a href="">Jordan</a>
+        <a href="">Sport</a>
+    </div>
+    <div style="text-align: center;">
+        <button id="card-adder" onclick="addCard()">Add card</button>
+    </div>
     <div id="cards">
         <div class="row">
             <div class="responsive-row">
@@ -180,5 +191,6 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, labore odio. Suscipit excepturi eos eaque voluptatum. Iste laborum corporis, dicta incidunt doloremque, error eveniet atque possimus consectetur suscipit illo quod tempora perspiciatis eaque recusandae neque odio! Nemo praesentium reprehenderit, provident consectetur ex iste nesciunt quis eveniet suscipit nam, voluptas laborum.</p>
        </div>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>
