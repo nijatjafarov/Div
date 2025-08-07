@@ -33,13 +33,29 @@ card.appendChild(p)
 
 var responsiveRow = document.createElement('div')
 responsiveRow.className = 'responsive-row'
-// responsiveRow.appendChild(card)
 row.appendChild(responsiveRow)
-row.appendChild(responsiveRow)
+row.appendChild(responsiveRow.cloneNode())
+
+cards.insertAdjacentElement("afterbegin", row)
 
 function addCard() {
+    var firstResponsiveRow = row.children[0]
+    var secondResponsiveRow = row.children[1]
 
-    // var cards = document.querySelector('#cards')
-    // cards.insertAdjacentElement("afterbegin", row)
+    if (firstResponsiveRow.children.length < 2) {
+        firstResponsiveRow.appendChild(card.cloneNode(true))
+    } else if (secondResponsiveRow.children.length < 2) {
+        secondResponsiveRow.appendChild(card.cloneNode(true))
+    } else {
+        row = row.cloneNode()
+
+        firstResponsiveRow = responsiveRow.cloneNode()
+        secondResponsiveRow = responsiveRow.cloneNode()
+
+        firstResponsiveRow.appendChild(card.cloneNode(true))
+        row.appendChild(firstResponsiveRow)
+        row.appendChild(secondResponsiveRow)
+        cards.insertAdjacentElement("afterbegin", row)
+    }
 }
 
