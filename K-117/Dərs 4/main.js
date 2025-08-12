@@ -16,21 +16,6 @@ function responsiveMenuHandler() {
 var row = document.createElement('div')
 row.className = 'row'
 
-var card = document.createElement('div')
-card.className = 'card'
-var img = document.createElement('img')
-img.src = 'https://alhamdtech.pk/cdn/shop/files/amazon-kindle-11th-gen-ebook-reader-2022-release-741931.png?v=1722252039'
-card.appendChild(img)
-var h3 = document.createElement('h3')
-h3.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, et!'
-card.appendChild(h3)
-var a = document.createElement('a')
-a.innerText = 'Web Design'
-card.appendChild(a)
-var p = document.createElement('p')
-p.innerText = '09 September'
-card.appendChild(p)
-
 var responsiveRow = document.createElement('div')
 responsiveRow.className = 'responsive-row'
 row.appendChild(responsiveRow)
@@ -39,23 +24,46 @@ row.appendChild(responsiveRow.cloneNode())
 cards.insertAdjacentElement("afterbegin", row)
 
 function addCard() {
-    var firstResponsiveRow = row.children[0]
-    var secondResponsiveRow = row.children[1]
-
-    if (firstResponsiveRow.children.length < 2) {
-        firstResponsiveRow.appendChild(card.cloneNode(true))
-    } else if (secondResponsiveRow.children.length < 2) {
-        secondResponsiveRow.appendChild(card.cloneNode(true))
+    var imgInputValue = document.querySelector('#card-image').value
+    var h3InputValue = document.querySelector('#card-title').value
+    var categoryInputValue = document.querySelector('#card-category').value
+    var dateInputValue = document.querySelector('#card-date').value
+    if (!imgInputValue || !h3InputValue || !categoryInputValue || !dateInputValue) {
+        alert("You haven't provided all information")
     } else {
-        row = row.cloneNode()
+        var card = document.createElement('div')
+        card.className = 'card'
+        var img = document.createElement('img')
+        img.src = imgInputValue
+        card.appendChild(img)
+        var h3 = document.createElement('h3')
+        h3.innerText = h3InputValue
+        card.appendChild(h3)
+        var a = document.createElement('a')
+        a.innerText = categoryInputValue
+        card.appendChild(a)
+        var p = document.createElement('p')
+        p.innerText = dateInputValue
+        card.appendChild(p)
 
-        firstResponsiveRow = responsiveRow.cloneNode()
-        secondResponsiveRow = responsiveRow.cloneNode()
+        var firstResponsiveRow = row.children[0]
+        var secondResponsiveRow = row.children[1]
 
-        firstResponsiveRow.appendChild(card.cloneNode(true))
-        row.appendChild(firstResponsiveRow)
-        row.appendChild(secondResponsiveRow)
-        cards.insertAdjacentElement("afterbegin", row)
+        if (firstResponsiveRow.children.length < 2) {
+            firstResponsiveRow.appendChild(card.cloneNode(true))
+        } else if (secondResponsiveRow.children.length < 2) {
+            secondResponsiveRow.appendChild(card.cloneNode(true))
+        } else {
+            row = row.cloneNode()
+
+            firstResponsiveRow = responsiveRow.cloneNode()
+            secondResponsiveRow = responsiveRow.cloneNode()
+
+            firstResponsiveRow.appendChild(card.cloneNode(true))
+            row.appendChild(firstResponsiveRow)
+            row.appendChild(secondResponsiveRow)
+            cards.insertAdjacentElement("afterbegin", row)
+        }
     }
 }
 
