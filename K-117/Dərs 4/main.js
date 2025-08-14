@@ -28,6 +28,7 @@ function addCard() {
     var h3InputValue = document.querySelector('#card-title').value
     var categoryInputValue = document.querySelector('#card-category').value
     var dateInputValue = document.querySelector('#card-date').value
+
     if (!imgInputValue || !h3InputValue || !categoryInputValue || !dateInputValue) {
         alert("You haven't provided all information")
     } else {
@@ -64,6 +65,11 @@ function addCard() {
             row.appendChild(secondResponsiveRow)
             cards.insertAdjacentElement("afterbegin", row)
         }
+
+        
+    }
+    if(!img.complete) {
+        alert('There is a problem with the image')
     }
 }
 

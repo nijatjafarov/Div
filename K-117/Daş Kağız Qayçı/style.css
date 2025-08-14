@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+body {
+    background-color:aquamarine;
+    font-family: "Jersey 10", sans-serif;
+    color:darkslategray;
+    font-size: 40px;
+    text-align: center;
+}
+
+#choices-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#choices-container img {
+    width: 300px;
+}
+
+#choices-container img:hover {
+    border: 20px dashed darkslategray;
+    cursor: pointer;
+}
