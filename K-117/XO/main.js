@@ -19,16 +19,20 @@ function play(cell) {
 
 function checkWin() {
     var cells = document.querySelectorAll('.cell');
+    var winCells = [[0, 1, 2], [3, 4, 5], [6, 7, 8],
+                    [0, 3, 6], [1, 4, 7], [2, 5, 8],
+                    [0, 4, 8], [2, 4, 6]];
 
-    if ((cells[0].innerHTML != '' && cells[0].innerHTML == cells[1].innerHTML && cells[1].innerHTML == cells[2].innerHTML) ||
-        (cells[3].innerHTML != '' && cells[3].innerHTML == cells[4].innerHTML && cells[4].innerHTML == cells[5].innerHTML) ||
-        (cells[6].innerHTML != '' && cells[6].innerHTML == cells[7].innerHTML && cells[7].innerHTML == cells[8].innerHTML) ||
-        (cells[0].innerHTML != '' && cells[0].innerHTML == cells[3].innerHTML && cells[3].innerHTML == cells[6].innerHTML) ||
-        (cells[1].innerHTML != '' && cells[1].innerHTML == cells[4].innerHTML && cells[4].innerHTML == cells[7].innerHTML) ||
-        (cells[2].innerHTML != '' && cells[2].innerHTML == cells[5].innerHTML && cells[5].innerHTML == cells[8].innerHTML) ||
-        (cells[0].innerHTML != '' && cells[0].innerHTML == cells[4].innerHTML && cells[4].innerHTML == cells[8].innerHTML) ||
-        (cells[2].innerHTML != '' && cells[2].innerHTML == cells[4].innerHTML && cells[4].innerHTML == cells[6].innerHTML)) {
-        alert('qalib var');
-        gameEnd = true;
+    for (var i = 0; i < winCells.length; i++) {
+        var a = winCells[i][0];
+        var b = winCells[i][1];
+        var c = winCells[i][2];
+
+        if (cells[a].innerHTML != '' && cells[a].innerHTML == cells[b].innerHTML && cells[b].innerHTML == cells[c].innerHTML) {
+            cells[a].style.backgroundColor = 'lightsalmon';
+            cells[b].style.backgroundColor = 'lightsalmon';
+            cells[c].style.backgroundColor = 'lightsalmon';
+            gameEnd = true;
+        }
     }
 }
